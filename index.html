@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HOME</title>
+		<link rel ="stylesheet" type ="text/css" href ="WarnerBros.css"/>
+		<link rel="icon" type="image/png" sizes = "192 x 192" href="android-chrome-512x512.png"/>
+
+		<style>
+			.breadcrumbs {
+				width: 78px;
+			}
+			article {
+				margin-top: 1%;
+			}
+			
+			article section figure img {
+				width: 100px;
+				height: 150px;
+				display: block;
+				margin-left: 60px;
+			}
+			
+			figure.firstRowImg:hover {
+			transform: scale(1.2);
+			}
+
+			
+			article section figure {
+				display: inline-block;
+				text-align: center;
+				padding: 0px 20px;
+				margin-top: 50px;
+				
+			}
+			
+			article section {
+				border: 2px solid #000;
+				background-color: #005aae;
+				width: 90%;
+				height: 250px;
+				color: #fff;
+				display: center;
+				margin-left: 2.5%;
+				margin-bottom: 40px;				
+			}
+	
+			.color-overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 50%;
+				height: 100%;
+				background-color: #005aae; /* set the color of the overlay */
+				opacity: 0.95; /* set the opacity of the overlay */
+				margin-left: 100px;
+			}		
+
+			.slideshow-container {
+				max.width: 430px;
+				position: relative;
+				margin-top: 40px;
+			} 
+			
+			.mySlides{
+				display: none;
+				position: absolute;
+			}
+			
+			.slideshow-container img{
+				width: 470px;
+				height: 200px;
+				margin-left: 340px;
+			}
+			
+			.header-section{
+				border: 1px solid black;
+				width: 160px;
+				color: #fff;
+				background-color: #005aae;
+				margin-left: 39px;
+				height: 40px;
+			}
+			
+			.image-container {
+			position: relative;
+			}
+
+			.image-container img {
+			display: block;
+			width: 100px;
+			height: 150px;
+			}
+		
+		
+			.slideshow-container img{
+				width: 600px;
+			}
+		
+
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<img src = "newHeader.png" alt = "header image">
+			<form class = "searchbar">
+				<input type = "search" placeholder = "Search...">
+				<button type = "submit"><img src = "magnifying-glass-icon-26762.png" style = "width: 8px; height:8px;"></button>
+			</form>
+			<form class = "signin">
+				<button type="submit">SIGN IN</button>
+			 </form>
+			<div class="accessibility">
+				<button class="language-button" aria-label="Switch language">
+					<img src="language accessibilty.png" alt="Accessibility icon">
+					<span class="language-text">Español</span>
+				</button>
+			</div>
+
+		</header>
+		
+		<nav>
+			<ul>
+				<li><a href = "index.html">HOME</a></li>
+				<li><a href = "Warner Bros MoviesPage.html">MOVIES</a></li>
+				<li><a href = "Warner Bros Series Page.html">SERIES</a></li>
+				<li><a href = "Warner Bros Animation Page.html">ANIMATION</a></li>
+				<li><a href = "Warner Bros GamePage.html">GAMES</a></li>
+				<li><a href = "Warner Bros Shop Page.html">SHOP</a></li>
+			</ul>
+		</nav>
+		
+		<div class="breadcrumbs">
+			<a href="index.html">HOME</a> 
+		</div>
+
+		<article>
+			<div class = "header-section">
+				<h3>COMING SOON</h3>
+			</div>
+			<section>
+				<figure>
+					<img src="Blue_Beetle_poster.jpg" alt = "Blue Beetle poster">
+					<caption>BLUE BEETLE</caption>
+				</figure>
+				
+				<figure>
+					<img src = "the flash.jpg" alt = "The Flash poster">
+					<caption>FLASH</caption>
+				</figure>
+				
+				<figure>
+					<img src = "joker.jpg" alt="Joker Folie a deux- poster">
+					<caption>JOKER: FOLIE à DEUX</caption>
+				</figure>
+				
+				<figure>
+					<img src= "wonka.jpg"alt="Wonka poster">
+					<caption>WONKA</caption>
+				</figure>
+				
+			</section>
+			
+			
+			<div class = "header-section">
+				<h3>FEATURED FILMS</h3>
+			</div>
+			<section>
+				<figure>
+					<img src = "mummies.jpg" alt = "Mummies poster">
+					<caption>MUMMIES</caption>
+				</figure>
+				
+				<figure>
+				<img src = "babayaga 2.jpg" alt="John Wick Chapter 4 poster" style = "width: 430px;">
+				<caption>JOHN WICK 4</caption>
+				</figure>
+				
+				<figure>
+				<img src = "blacky.jpg"alt="Black Adam poster">
+				<caption>BLACK ADAM</caption>
+				</figure>
+				
+			</section>
+			
+			
+			<div class = "header-section">
+				<h3>TRAILERS</h3>
+			</div>	
+			<section>
+				<a href = "Warner Bros HomeTrailerPage.html">
+					<div class = "slideshow-container">				
+						<img class = "mySlides" src = "THE NUN 2 TRAILER PIC.jpg" alt = "The Nun 2">
+						<img class = "mySlides" src = "flashy.png"  alt = "The Flash season 9 poster">
+						<img class = "mySlides" src ="MEG 2 TRAILER PIC.jpg" alt = "The Meg 2">
+					</div>
+				</a>		
+				<script>
+						var slideIndex = 0;
+						showSlides();
+
+						function showSlides() {
+						var i;
+						var slides = document.getElementsByClassName("mySlides");
+						for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+						}
+						slideIndex++;
+						if (slideIndex > slides.length) {slideIndex = 1}
+						slides[slideIndex-1].style.display = "block";
+						setTimeout(showSlides, 1500); // Change image every 3 seconds
+					}
+				</script>
+				
+			</section>
+		</article>
+		
+		<footer>
+			<section>
+				<img src = "favicon-32x32.png" alt = "warner bros icon" width = "40" height = "40" style = "float:left;"><p style = "margin: 80px; color: white;">TM & © 2023 Warner Bros. Entertainment Inc. All rights reserved.  Terms of use  Accessibility  Privacy Policy Ad choices</p>
+			</section>
+		</footer>
+	</body>
+</html>
